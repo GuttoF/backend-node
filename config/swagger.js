@@ -1,5 +1,4 @@
 const swaggerJsdoc = require('swagger-jsdoc');
-const swaggerUi = require('swagger-ui-express');
 
 const options = {
   definition: {
@@ -7,7 +6,7 @@ const options = {
     info: {
       title: 'API Doc',
       version: '1.0.0',
-      description: 'Swagger',
+      description: 'Doc',
     },
     servers: [
       {
@@ -84,7 +83,4 @@ const options = {
 
 const specs = swaggerJsdoc(options);
 
-module.exports = {
-  swaggerUi,
-  specs,
-};
+module.exports = specs;
