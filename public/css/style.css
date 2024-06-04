@@ -10,11 +10,20 @@
 
 .header {
     height: 150px;
-    background-color: tomato;
+    background-color: #26425A !important;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+.navbar {
+    height: 50px;
+    background-color: #26425A !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .header .menu {
     display: flex;
@@ -38,7 +47,7 @@
 
 .footer {
     height: 100px;
-    background-color: silver;
+    background-color: #26425A;
     padding: 10px;
 }
 
