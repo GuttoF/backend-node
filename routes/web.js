@@ -1,5 +1,7 @@
 const express = require("express");
 const router = express.Router();
+const swaggerUi = require('swagger-ui-express');
+const swaggerFile = require('../swagger-output.json'); // Arquivo gerado pelo Swagger Autogen
 
 const NavegacaoController = require("../app/controllers/NavegacaoController");
 const TasksController = require("../app/controllers/TasksController");
@@ -35,7 +37,7 @@ router.post('/agendas/remove/:id', AgendasController.remove)
 router.get('/agendas/edit/:id', AgendasController.edit)
 router.post('/agendas/update', AgendasController.update)
 
-
+router.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 router.get('*', function notFound(request, response) {
     return response.render("404");
